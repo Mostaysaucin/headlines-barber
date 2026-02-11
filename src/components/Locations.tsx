@@ -4,60 +4,70 @@ const locations = [
     address: "19455 Shumard Oak Dr #103",
     city: "Land O' Lakes, FL 34638",
     phone: "(813) 803-7110",
+    bookingUrl: "https://HeadlinesBarbershopsunlake.as.me/",
   },
   {
     name: "Bexley",
     address: "16936 Focus Loop",
     city: "Land O'Lakes, FL 34638",
     phone: "(813) 749-6109",
+    bookingUrl: "https://snlheadlinesbarbers.as.me/schedule/88bd891a",
   },
   {
     name: "Northdale / Carrollwood",
     address: "13032 N Dale Mabry Hwy",
     city: "Tampa, FL 33618",
     phone: "(813) 374-9420",
+    bookingUrl: "https://ndheadlinesbarbers.as.me/",
   },
   {
     name: "New Tampa",
     address: "6431 E County Line Rd #103",
     city: "Tampa, FL 33463",
     phone: "(813) 907-0707",
+    bookingUrl: "https://HeadlinesBarbershop.as.me/",
   },
   {
     name: "Brandon",
     address: "10274 Causeway Blvd",
     city: "Tampa, FL 33619",
     phone: "(813) 605-0719",
+    bookingUrl: "https://headlinesbarbershops.wlbookings.com/booking?t=s&uuid=f79be7d4-72c5-477d-ac8f-51dbf5fbbccf",
   },
   {
     name: "Land O Lakes",
     address: "23104 FL-54",
     city: "Lutz, FL 33549",
     phone: "(813) 428-5917",
+    bookingUrl: "https://lolheadlinesbarbers.as.me/?location=Headlines%20LoL",
   },
   {
     name: "Tampa Palms",
     address: "17024 Palm Pointe Dr",
     city: "Tampa, FL 33647",
     phone: "(813) 284-7417",
+    bookingUrl: "https://headlinesbarbershops.wlbookings.com/booking?t=s&uuid=ac9c7410-76fa-40ee-a325-cc15ec01c61a",
   },
   {
     name: "West Palm Beach",
     address: "2650 S Military Trail Unit 25",
     city: "West Palm Beach, FL 33415",
     phone: "(561) 559-9701",
+    bookingUrl: "https://booking.mangomint.com/headlinesbarbershop/westpalmbeach",
   },
   {
     name: "Bloomingdale",
     address: "909 E Bloomingdale Ave",
     city: "Brandon, FL 33511",
     phone: "(813) 278-5346",
+    bookingUrl: "https://headlinesbarbershops.wlbookings.com/booking?t=s&uuid=e56ade0a-0e81-43c5-afd2-9a899f22cee8",
   },
   {
     name: "Avalon Park",
     address: "33913 FL 54",
     city: "Wesley Chapel, FL 33545",
     phone: "(813) 783-3621",
+    bookingUrl: "https://headlinesbarbershops.wlbookings.com/booking?t=s&uuid=b3775a51-1175-48c4-a498-003a5852ed99",
   },
 ];
 
@@ -133,23 +143,33 @@ export default function Locations() {
               </div>
 
               {/* Actions */}
-              <div className="flex gap-3 mt-4">
+              <div className="flex flex-col gap-3 mt-4">
                 <a
-                  href={`https://maps.google.com/?q=${encodeURIComponent(
-                    `${location.address}, ${location.city}`
-                  )}`}
+                  href={location.bookingUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex-1 text-center bg-surface border border-primary/30 text-primary font-heading text-xs tracking-widest py-2 hover:bg-primary hover:text-accent transition-all duration-200"
+                  className="w-full text-center bg-primary text-accent font-heading text-sm tracking-widest py-3 hover:bg-primary-light transition-colors duration-200"
                 >
-                  DIRECTIONS
+                  BOOK AT THIS LOCATION
                 </a>
-                <a
-                  href={`tel:${location.phone.replace(/[^0-9]/g, "")}`}
-                  className="flex-1 text-center bg-primary text-accent font-heading text-xs tracking-widest py-2 hover:bg-primary-light transition-colors duration-200"
-                >
-                  CALL
-                </a>
+                <div className="flex gap-3">
+                  <a
+                    href={`https://maps.google.com/?q=${encodeURIComponent(
+                      `${location.address}, ${location.city}`
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 text-center bg-surface border border-white/10 text-text-secondary font-heading text-xs tracking-widest py-2 hover:border-primary/30 hover:text-accent transition-all duration-200"
+                  >
+                    DIRECTIONS
+                  </a>
+                  <a
+                    href={`tel:${location.phone.replace(/[^0-9]/g, "")}`}
+                    className="flex-1 text-center bg-surface border border-white/10 text-text-secondary font-heading text-xs tracking-widest py-2 hover:border-primary/30 hover:text-accent transition-all duration-200"
+                  >
+                    CALL
+                  </a>
+                </div>
               </div>
             </div>
           ))}

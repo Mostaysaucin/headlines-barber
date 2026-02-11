@@ -52,9 +52,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://booksy.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#locations"
               className="bg-primary hover:bg-primary-light text-accent font-heading text-sm tracking-widest px-6 py-2.5 transition-colors duration-200"
             >
               BOOK NOW
@@ -106,9 +104,8 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="https://booksy.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#locations"
+              onClick={() => setMobileOpen(false)}
               className="inline-block mt-4 bg-primary hover:bg-primary-light text-accent font-heading text-sm tracking-widest px-6 py-2.5 transition-colors"
             >
               BOOK NOW

@@ -21,9 +21,7 @@ export default function BookingCTA() {
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="https://booksy.com"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#locations"
               className="bg-primary hover:bg-primary-light text-accent font-heading text-lg tracking-widest px-10 py-4 transition-colors duration-200 min-w-[260px]"
             >
               BOOK YOUR APPOINTMENT

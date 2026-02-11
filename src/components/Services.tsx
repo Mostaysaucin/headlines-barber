@@ -115,9 +115,7 @@ export default function Services() {
         {/* CTA */}
         <div className="text-center mt-12">
           <a
-            href="https://booksy.com"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#locations"
             className="inline-block bg-primary hover:bg-primary-light text-accent font-heading text-lg tracking-widest px-10 py-4 transition-colors duration-200"
           >
             BOOK YOUR SERVICE
